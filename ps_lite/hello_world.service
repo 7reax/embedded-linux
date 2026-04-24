@@ -1,0 +1,26 @@
+[Unit]
+Description=Hello World Demo Prozess (/proc Demonstration)
+Documentation=https://man7.org/linux/man-pages/man5/proc.5.html
+After=network.target
+Wants=network.target
+
+[Service]
+# Programmtyp: einfacher Prozess (kein Forking)
+Type=simple
+
+# Ausführbarer Pfad des Programms
+ExecStart=/root/home/embedded-linux/ps_lite/ps_lite
+
+# Benutzer/Gruppe unter der der Prozess läuft (kein root!)
+User=c4
+
+# Arbeitsverzeichnis
+WorkingDirectory=/tmp
+
+# Automatischer Neustart bei Absturz
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+# Wird beim normalen Systemstart aktiviert (multi-user.target)
+WantedBy=multi-user.target
