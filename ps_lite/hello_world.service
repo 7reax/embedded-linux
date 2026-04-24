@@ -9,7 +9,7 @@ Wants=network.target
 Type=simple
 
 # Ausführbarer Pfad des Programms
-ExecStart=/root/home/embedded-linux/ps_lite/ps_lite
+ExecStart=/root/home/embedded-linux/build/embedded_linux
 
 # Benutzer/Gruppe unter der der Prozess läuft (kein root!)
 User=c4
