@@ -112,7 +112,7 @@ sudo rmmod hello_chardev
 
 ---
 
-## Unterschied w3 → w4
+## Unterschied w3 → w3.1
 
 | Merkmal | w3 (`hello_module`) | w4 (`hello_chardev`) |
 |---|---|---|
