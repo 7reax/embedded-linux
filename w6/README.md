@@ -13,6 +13,20 @@ Zwei Prozesse kommunizieren über System-V Shared Memory.
                           gesichert durch Semaphor (Mutex)
 ```
 
+## Bauen
+
+```bash
+# Auf dem Board kompilieren (gcc muss installiert sein)
+sudo apt install -y gcc make   # einmalig
+make clean && make
+```
+
+> **Exec format error?** Das passiert, wenn die auf dem Host-PC (z. B. macOS / x86_64)
+> kompilierten Binaries auf das Board kopiert wurden. Immer `make clean && make`
+> **auf dem Board** ausführen – der ODROID-C4 ist ARM64 und kann keine x86-Binaries starten.
+
+---
+
 ## Ausführen
 
 ### Option 1 – Zwei separate Terminals (empfohlen)
